@@ -1,0 +1,5 @@
+<% if current_user.favorite?(micropost) %>
+  <%= link_to 'UnFavorite', micropost_favorites_path(micropost), method: :delete, class: 'btn btn-danger btn-block' %>
+<% else %>
+  <%= link_to 'Favorite', micropost_favorites_path(micropost), method: :post, class: 'btn btn-primary btn-block' %>
+<% end %>
