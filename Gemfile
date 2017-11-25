@@ -59,3 +59,6 @@ end
 
 gem 'carrierwave'
 gem 'rmagick'
+
+gem "gmaps4rails"
+gem "geocoder"
