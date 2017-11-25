@@ -19,15 +19,17 @@ class MicropostsController < ApplicationController
     flash[:success] = 'メッセージを削除しました。'
     redirect_back(fallback_location: root_path)
   end
+
   private
+
   def micropost_params
-    params.require(:micropost).permit(:content)
+    params.require(:micropost).permit(:content, :image, :image_cache)
   end
   
   def correct_user
     @micropost = current_user.microposts.find_by(id: params[:id])
     unless @micropost
-           redirect_to root_url
+      redirect_to root_url
     end
   end
 end
