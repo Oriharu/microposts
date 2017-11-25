@@ -22,7 +22,7 @@
         
         <div>
         <% if micropost.image? %>
-　　      <br><%= image_tag micropost.image.thumb.url %>
+　　      <br><%= image_tag micropost.image.url, style: 'max-width: 200px;' %>
 　　    <% end %>
 　　    </div>
       </div>
