@@ -63,3 +63,4 @@ gem 'cloudinary'
 
 gem "gmaps4rails"
 gem "geocoder"
+gem "ransack"
